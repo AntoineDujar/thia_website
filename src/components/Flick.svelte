@@ -8,11 +8,7 @@
 
   let flicking: Flicking;
 
-  const plugins = [
-    new AutoPlay({ duration: 15000, direction: "NEXT", stopOnHover: false }),
-    new Arrow(),
-    new Fade(""),
-  ];
+  const plugins = [new Arrow(), new Fade("")];
 </script>
 
 <div class="container">
