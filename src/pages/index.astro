@@ -1,16 +1,26 @@
 ---
-
+import Layout from "@layouts/Layout.astro";
+import Inquiry from "@components/Inquiry.astro";
+import Videos from "@components/Videos.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Thia Lanuza">
+  <section>
+    <h1>Thia Lanuza</h1>
+    <h2>Aspiring Signer</h2>
+    <a href="./"><p>BOOK NOW</p></a>
+  </section>
+  <Videos />
+  <section>
+    <h3>ABOUT ME</h3>
+  </section>
+  <section>
+    <h3>PERFORMANCES</h3>
+  </section>
+  <Inquiry />
+  <footer>
+    <section>
+      <h3>CONTACT ME</h3>
+    </section>
+  </footer>
+</Layout>
