@@ -2,25 +2,19 @@
 import Layout from "@layouts/Layout.astro";
 import Inquiry from "@components/Inquiry.astro";
 import Videos from "@components/Videos.astro";
+import Hero from "@components/Hero.astro";
+import About from "@components/About.astro";
+import Performances from "@components/Performances.astro";
+import Contact from "@components/Contact.astro";
 ---
 
 <Layout title="Thia Lanuza">
-  <section>
-    <h1>Thia Lanuza</h1>
-    <h2>Aspiring Signer</h2>
-    <a href="./"><p>BOOK NOW</p></a>
-  </section>
+  <Hero />
   <Videos />
-  <section>
-    <h3>ABOUT ME</h3>
-  </section>
-  <section>
-    <h3>PERFORMANCES</h3>
-  </section>
+  <About />
+  <Performances />
   <Inquiry />
   <footer>
-    <section>
-      <h3>CONTACT ME</h3>
-    </section>
+    <Contact />
   </footer>
 </Layout>
