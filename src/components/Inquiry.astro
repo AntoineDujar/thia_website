@@ -1,9 +1,9 @@
 ---
-
+import Header from "./Header.astro";
 ---
 
 <section>
-  <h3>BOOKING INQUIRY</h3>
+  <Header title="BOOKING INQUIRY" />
   <form name="booking" method="POST" data-netlify="true" class="inquiry_form">
     <div class="form_input_fields">
       <p>
@@ -13,7 +13,12 @@
         <input type="tel" name="phone" placeholder="Phone Number" />
       </p>
       <p>
-        <input type="text" name="inquiry" placeholder="Inquiry Details" />
+        <input
+          type="text"
+          class="inputbox"
+          name="inquiry"
+          placeholder="Inquiry Details"
+        />
       </p>
     </div>
     <p>
@@ -21,3 +26,13 @@
     </p>
   </form>
 </section>
+
+<style>
+  input {
+    padding: 0.4rem 1rem;
+  }
+
+  .inputbox {
+    min-height: 100%;
+  }
+</style>

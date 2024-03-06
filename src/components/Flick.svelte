@@ -40,7 +40,7 @@
   }
 
   .container {
-    max-width: 35rem;
+    max-width: 1500px;
     border-radius: 8px;
     overflow: hidden;
   }

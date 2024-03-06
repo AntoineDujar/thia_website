@@ -1,7 +1,96 @@
 ---
-
+import Header from "./Header.astro";
+import { Image } from "astro:assets";
+import about1 from "@images/about-1.jpg";
+import about2 from "@images/about-2.jpg";
+import about3 from "@images/about-3.jpg";
 ---
 
 <section>
-  <h3>ABOUT ME</h3>
+  <div class="wrapper">
+    <div class="header-wrapper">
+      <Header title="ABOUT ME" />
+    </div>
+    <svg
+      width="92"
+      height="227"
+      class="wire"
+      viewBox="0 0 92 227"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M91 3C48.3334 11 -26.6 37.4 15 79C67 131 65.0001 175 15 225"
+        stroke="white"
+        stroke-width="5"></path>
+    </svg>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+    <div class="images">
+      <svg
+        width="173"
+        height="690"
+        viewBox="0 0 173 690"
+        fill="none"
+        class="wire2"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M123 2C107.333 36.3333 85.3998 114.4 123 152C170 199 199 282 123 282C62.1998 282 12.5 221 3.99987 194.5C-0.872694 179.309 8.69976 151 29.4998 161C33.9997 162.333 44.3001 181.2 45.5001 184C47.2143 188 42.5001 192.5 38 188C34.5474 184.547 42.4999 161 48.9999 157.5C55.4999 154 68.7292 147.967 82 169C108.5 211 -16 317.5 51.5 424.5C116.58 527.664 131 612 54.9998 688"
+          stroke="white"
+          stroke-width="5"></path>
+      </svg>
+
+      <Image src={about1} alt="image 1 singing" height={584} width={380} />
+      <Image src={about2} alt="image 2 singing" height={584} width={380} />
+      <Image src={about3} alt="image 3 singing" height={584} width={380} />
+    </div>
+  </div>
 </section>
+
+<style>
+  p {
+    color: white;
+    max-width: 110ch;
+    font-family: "Roboto", sans-serif, system-ui;
+    margin-top: 3rem;
+  }
+
+  .images {
+    margin: 4rem 0;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 4rem;
+  }
+
+  .header-wrapper {
+    margin: 0rem 0 3rem 0;
+  }
+
+  .wire {
+    position: absolute;
+    right: 200px;
+    top: -65px;
+  }
+  .wire2 {
+    position: absolute;
+    right: 320px;
+    top: -50px;
+  }
+</style>
