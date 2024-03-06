@@ -14,6 +14,12 @@ dependencies:
   '@egjs/svelte-flicking':
     specifier: ^4.11.2
     version: 4.11.2
+  '@fontsource/dm-serif-display':
+    specifier: ^5.0.19
+    version: 5.0.19
+  '@fontsource/koulen':
+    specifier: ^5.0.19
+    version: 5.0.19
   astro:
     specifier: ^4.4.6
     version: 4.4.6(typescript@5.3.3)
@@ -600,6 +606,14 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/dm-serif-display@5.0.19:
+    resolution: {integrity: sha512-18tglu23iVFkGrBvOKvvre6C845XoXNaVZm6afvjjWZF4RY6DSFNjrmncYatYYPBD265CePyNEnNBjwDRc9iIg==}
+    dev: false
+
+  /@fontsource/koulen@5.0.19:
+    resolution: {integrity: sha512-E7Kre+4uo2wSrFZbBkte78wO9KdBxevu1MFZ1bmm7J9FD+pWMdNo8EamKSektXF/Y0EP3E0DLmckoYIV0mKHdw==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.4:
     resolution: {integrity: sha512-Oud2QPM5dHviZNn4y/WhhYKSXksv+1xLEIsNrAbGcFzUN3ubqWRFT5gwPchNc5NuzILOU4tPBDTZ4VwhL8Y7cw==}
