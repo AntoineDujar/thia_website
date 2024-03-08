@@ -1,21 +1,124 @@
 ---
 import "@fontsource/dm-serif-display";
 import "@fontsource/koulen";
+import { Image } from "astro:assets";
+import HeroImage from "@images/heroimage.jpeg";
+import Mic from "@components/Mic.astro";
 ---
 
-<section>
-  <h1>Thia Lanuza</h1>
-  <h2>Aspiring Signer</h2>
-  <a href="./"><p>BOOK NOW</p></a>
-</section>
+<div class="hero-wrapper">
+  <div class="image-wrapper">
+    <Image src={HeroImage} alt="Image of aspiring vocalist Thia Lanuza" />
+  </div>
+  <div class="text-wrapper">
+    <h1>Thia Lanuza</h1>
+    <div class="nested">
+      <div class="vocalist">
+        <h2>Aspiring Vocalist</h2>
+        <div class="mic">
+          <Mic />
+        </div>
+        <svg
+          width="60"
+          height="493"
+          class="wire"
+          viewBox="0 0 60 493"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 2C28.305 26.814 74.7217 98.5488 49.9484 186.977C18.9817 297.512 10.9903 292.248 38.9602 420.829C61.3361 523.695 40.2921 572.47 26.9731 584"
+            stroke="white"
+            stroke-width="5"></path>
+        </svg>
+      </div>
+      <a href="./">
+        <p>BOOK NOW</p>
+      </a>
+    </div>
+  </div>
+</div>
 
 <style>
+  .hero-wrapper {
+    min-height: 1056px;
+    background-color: #19001f;
+    display: flex;
+    position: relative;
+  }
+
+  .image-wrapper {
+    z-index: 1;
+  }
+
+  .wire {
+    position: absolute;
+    top: 214px;
+    right: -50px;
+  }
+
+  .vocalist {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .mic {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .text-wrapper {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    text-align: right;
+    margin-right: 5rem;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .nested {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 200px;
+    gap: 2rem;
+  }
+
   h1,
   h2 {
     font-family: "DM Serif Display", serif;
+    color: white;
+  }
+
+  h1 {
+    font-size: 15rem;
+  }
+
+  h2 {
+    font-size: 7rem;
+    max-width: 500px;
+    text-align: left;
   }
 
   a {
     font-family: "Koulen", serif;
+    border-radius: 35px;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    background-color: purple;
+    color: white;
+    align-self: flex-start;
+  }
+
+  a:visited {
+    color: white;
   }
 </style>

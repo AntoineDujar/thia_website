@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+import "@fontsource/koulen";
+---
+
+<div class="header">
+  <img src="star.svg" alt="decorative star" />
+  <h3>{title}</h3>
+  <img src="star.svg" alt="decorative star" />
+</div>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  h3 {
+    color: white;
+    margin: 1rem 0;
+    font-family: "Koulen", system-ui;
+    font-size: 4.5rem;
+  }
+
+  img {
+    height: 30px;
+    width: 30px;
+  }
+</style>

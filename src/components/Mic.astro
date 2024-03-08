@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import Microphone from "@images/microphone.png";
+---
+
+<span class="microphone">
+  <img
+    id="star-1"
+    src="star.svg"
+    alt="decorative star"
+    height="30"
+    width="30"
+  />
+  <Image src={Microphone} alt="microphone" height={80} width={80} />
+  <img
+    id="star-2"
+    src="star.svg"
+    alt="decorative star"
+    height="30"
+    width="30"
+  />
+</span>
+
+<style>
+  .microphone {
+    position: relative;
+    display: flex;
+  }
+
+  #star-1 {
+    position: absolute;
+    align-self: flex-end;
+  }
+
+  #star-2 {
+    position: absolute;
+    right: 0;
+  }
+</style>
