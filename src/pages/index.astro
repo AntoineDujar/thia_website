@@ -1,4 +1,6 @@
 ---
+import "@fontsource/dm-serif-display";
+import "@fontsource/koulen";
 import Layout from "@layouts/Layout.astro";
 import Inquiry from "@components/Inquiry.astro";
 import Videos from "@components/Videos.astro";
@@ -6,8 +8,6 @@ import Hero from "@components/Hero.astro";
 import About from "@components/About.astro";
 import Performances from "@components/Performances.astro";
 import Contact from "@components/Contact.astro";
-import Header from "@components/Header.astro";
-import Flick from "@components/Flick.svelte";
 ---
 
 <Layout title="Thia Lanuza">
@@ -19,33 +19,6 @@ import Flick from "@components/Flick.svelte";
   <footer>
     <Contact />
   </footer>
-
-  <Flick client:idle>
-    <iframe
-      slot="video-1"
-      width="1400"
-      height="787"
-      src="https://www.youtube.com/embed/C7FN6su1e9I?si=uguFUp6r1p7sBsCZ"
-      title="YouTube video player"
-      allow=""
-      allowfullscreen></iframe>
-    <iframe
-      slot="video-2"
-      width="1400"
-      height="787"
-      src="https://www.youtube.com/embed/guUQn_Qnh60?si=ku4kNmp0sNez9H2R"
-      title="YouTube video player"
-      allow=""
-      allowfullscreen></iframe>
-    <iframe
-      slot="video-3"
-      width="1400"
-      height="787"
-      src="https://www.youtube.com/embed/Qt8XVTzANug?si=3v9Yt5NBWZCqaFoX"
-      title="YouTube video player"
-      allow=""
-      allowfullscreen></iframe>
-  </Flick>
 
   <style>
     img {
