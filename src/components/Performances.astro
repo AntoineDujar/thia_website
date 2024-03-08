@@ -1,10 +1,16 @@
 ---
 import Header from "./Header.astro";
+import performance_1 from "@images/performance_1.jpg";
+import performance_2 from "@images/performance_2.jpg";
+import performance_3 from "@images/performance_3.jpg";
+import performance_4 from "@images/performance_4.jpg";
+import performance_5 from "@images/performance_5.webp";
+import performance_6 from "@images/performance_6.jpg";
+import { Image } from "astro:assets";
 ---
 
 <section>
   <Header title="PERFORMANCES" />
-  <h3>2016</h3>
   <svg
     width="26"
     height="57"
@@ -17,13 +23,108 @@ import Header from "./Header.astro";
       stroke="white"
       stroke-width="5"></path>
   </svg>
+  <h3>2016</h3>
+  <div class="all-posters">
+    <div class="image-wrapper">
+      <Image
+        src={performance_1}
+        class="perf-image"
+        id="perf-1"
+        alt="Image of aspiring vocalist Thia Lanuza"
+      />
+      <span id="perf-2">
+        <Image
+          style="margin:auto auto"
+          src={performance_2}
+          alt="Image of aspiring vocalist Thia Lanuza"
+        />
+      </span>
+      <Image
+        src={performance_3}
+        id="perf-3"
+        alt="Image of aspiring vocalist Thia Lanuza"
+      />
+      <Image
+        src={performance_4}
+        id="perf-4"
+        alt="Image of aspiring vocalist Thia Lanuza"
+      />
+      <Image
+        src={performance_5}
+        id="perf-4"
+        alt="Image of aspiring vocalist Thia Lanuza"
+      />
+      <Image
+        src={performance_6}
+        id="perf-4"
+        alt="Image of aspiring vocalist Thia Lanuza"
+      />
+    </div>
+    <svg
+      width="196"
+      height="4320"
+      viewBox="0 0 196 4320"
+      fill="none"
+      class="background-wire"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M82.0287 0C82.0287 71.5317 264.043 253.752 161.86 504.028C34.1301 816.873 -29.7348 1155.79 26.147 1346.97C82.0287 1538.15 137.91 1851 82.0287 2042.18C26.147 2233.37 -29.7348 2580.97 26.147 2798.23C82.0287 3015.48 137.91 3432.61 82.0287 3719.38C37.3233 3948.8 63.4015 4214.72 82.0287 4319"
+        stroke="white"
+        stroke-width="5"></path>
+    </svg>
+  </div>
 </section>
 
 <style>
   h3 {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
     color: white;
     font-size: 3rem;
     font-family: "Roboto", system-ui, sans-serif;
+  }
+
+  .all-posters {
+    position: relative;
+  }
+
+  .perf-image {
+    margin: 0 auto;
+  }
+
+  #perf-1 {
+    margin-top: 5rem;
+  }
+
+  #perf-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/performance_6.jpg");
+    z-index: 3;
+  }
+
+  #perf-2 {
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  .image-wrapper {
+    /* background-color: gray; */
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .background-wire {
+    position: absolute;
+    right: 43%;
+    top: 15px;
+    z-index: -1;
   }
 </style>
