@@ -1,7 +1,23 @@
 ---
 import Header from "./Header.astro";
+import Flickexp from "@components/Flickexp.svelte";
+import PanelContainer from "./PanelContainer.astro";
+import FlickPanel from "./FlickPanel.svelte";
+import Flicking, { FlickingPanel } from "@egjs/svelte-flicking";
 ---
 
 <section>
   <Header title="PERFORMANCES" />
+  <Flickexp client:only="Svelte">
+    <PanelContainer slot="panels">
+      <iframe
+        width="1400"
+        slot="iframe"
+        height="787"
+        src="https://www.youtube.com/embed/C7FN6su1e9I?si=uguFUp6r1p7sBsCZ"
+        title="YouTube video player"
+        allow=""
+        allowfullscreen></iframe>
+    </PanelContainer>
+  </Flickexp>
 </section>

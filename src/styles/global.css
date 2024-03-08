@@ -1,7 +1,5 @@
 @import url("./reset.css");
 
-
-
 section {
   display: flex;
   flex-direction: column;
@@ -15,4 +13,10 @@ body {
 
 html {
   background-color: #19001f;
+}
+
+@media (max-width: 1330px) {
+  body {
+    max-width: 100%;
+  }
 }

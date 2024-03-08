@@ -22,9 +22,18 @@
     options={{ circular: true, duration: 450, preventDefaultOnDrag: true }}
     bind:this={flicking}
   >
-    <FlickingPanel><slot name="video-1" /></FlickingPanel>
-    <FlickingPanel><slot name="video-2" /></FlickingPanel>
-    <FlickingPanel><slot name="video-3" /></FlickingPanel>
+    <slot name="panels" />
+    <!-- <FlickingPanel><slot name="video-1" /></FlickingPanel> -->
+    <!-- <FlickingPanel>
+      <iframe
+        width="1400"
+        height="787"
+        src="https://www.youtube.com/embed/C7FN6su1e9I?si=uguFUp6r1p7sBsCZ"
+        title="YouTube video player"
+        allow=""
+        allowfullscreen
+      ></iframe> -->
+    <!-- </FlickingPanel> -->
     <svelte:fragment slot="viewport">
       <span class="flicking-arrow-prev is-circle"></span>
       <span class="flicking-arrow-next is-circle"></span>

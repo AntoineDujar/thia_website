@@ -1,0 +1,15 @@
+---
+import FlickPanel from "./FlickPanel.svelte";
+// interface Props {
+//   src: string;
+//   alt: string;
+//   height: string;
+//   width: string;
+// }
+
+const { src, alt, height, width } = Astro.props;
+---
+
+<FlickPanel client:only="svelte">
+  <slot name="iframe" />
+</FlickPanel>

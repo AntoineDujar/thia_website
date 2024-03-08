@@ -2,6 +2,38 @@
 import Flick from "@components/Flick.svelte";
 ---
 
+<script>
+  const debounce = (callback, wait) => {
+    let timeoutId = null;
+    return (...args) => {
+      window.clearTimeout(timeoutId);
+
+      timeoutId = window.setTimeout(() => {
+        callback.apply(null, args);
+      }, wait);
+    };
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    function changeIFrameContent() {
+      let query = window.matchMedia("(max-width: 1224px)");
+      let iframe = document.querySelector("main>iframe");
+      if (query.matches) {
+        iframe.setAttribute("width", window.innerWidth.toString());
+        iframe.setAttribute(
+          "height",
+          Math.floor(window.innerWidth * 0.5625).toString()
+        );
+      }
+    }
+    changeIFrameContent();
+
+    const debouncedIFrame = debounce((event) => {
+      changeIFrameContent();
+    }, 250);
+    window.addEventListener("resize", changeIFrameContent);
+  });
+</script>
+
 <section>
   <Flick client:idle>
     <iframe
