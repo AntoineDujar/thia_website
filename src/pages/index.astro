@@ -1,4 +1,6 @@
 ---
+import "@fontsource/dm-serif-display";
+import "@fontsource/koulen";
 import Layout from "@layouts/Layout.astro";
 import Inquiry from "@components/Inquiry.astro";
 import Videos from "@components/Videos.astro";
@@ -6,7 +8,6 @@ import Hero from "@components/Hero.astro";
 import About from "@components/About.astro";
 import Performances from "@components/Performances.astro";
 import Contact from "@components/Contact.astro";
-import Header from "@components/Header.astro";
 ---
 
 <Layout title="Thia Lanuza">
@@ -18,4 +19,14 @@ import Header from "@components/Header.astro";
   <footer>
     <Contact />
   </footer>
+
+  <style>
+    img {
+      /* height: 70vh;
+      width: 70vh; */
+      position: absolute;
+      z-index: 3;
+      right: 20px;
+    }
+  </style>
 </Layout>
