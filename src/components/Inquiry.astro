@@ -6,24 +6,19 @@ import Header from "./Header.astro";
   <Header title="BOOKING INQUIRY" />
   <form name="booking" method="POST" data-netlify="true" class="inquiry_form">
     <div class="form_input_fields">
-      <p>
+      <div class="first_input_column">
         <input type="text" name="first_name" placeholder="First Name" />
         <input type="text" name="last_name" placeholder="Last Name" />
         <input type="email" name="email" placeholder="Email" />
         <input type="tel" name="phone" placeholder="Phone Number" />
-      </p>
-      <p>
-        <input
-          type="text"
-          class="inputbox"
-          name="inquiry"
-          placeholder="Inquiry Details"
-        />
-      </p>
+      </div>
+      <div class="spacer"></div>
+      <div class="second_input_column">
+        <textarea class="inputbox" name="inquiry" placeholder="Inquiry"
+        ></textarea>
+      </div>
     </div>
-    <p>
-      <button type="submit">BOOK NOW</button>
-    </p>
+    <button type="submit">BOOK NOW</button>
   </form>
 </section>
 
@@ -32,6 +27,100 @@ import Header from "./Header.astro";
     padding: 0.4rem 1rem;
   }
 
+  button {
+    margin-top: 1rem;
+    width: 19.2rem;
+    height: 3rem;
+    padding: 0px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-family: "Koulen", serif;
+    font-size: 1.5rem;
+    border: none;
+  }
+
+  .spacer {
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .spacer {
+      margin-left: 0rem;
+      margin-top: 0.35rem;
+    }
+  }
+
+  .inquiry_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
+  .form_input_fields {
+    display: flex;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .form_input_fields {
+      flex-direction: column;
+    }
+  }
+
+  .first_input_column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .second_input_column {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: stetch;
+  }
+
+  .first_input_column input {
+    height: 1.5rem;
+    margin-bottom: 0.35rem;
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif, system-ui;
+    font-size: 1.15rem;
+  }
+
+  .first_input_column input:last-child {
+    margin-bottom: 0rem;
+  }
+
+  .first_input_column input::placeholder {
+    color: rgb(97, 97, 97);
+    font-family: "Roboto", sans-serif, system-ui;
+  }
+
   .inputbox {
-    min-height: 100%;
+    height: 100%;
+    padding-left: 1rem;
+    padding-top: 0.45rem;
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif, system-ui;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.15rem;
+  }
+
+  @media (max-width: 768px) {
+    .inputbox {
+      height: 5rem;
+    }
+  }
+
+  .inputbox::placeholder {
+    color: rgb(97, 97, 97);
+    font-family: "Roboto", sans-serif, system-ui;
+    font-size: 1.15rem;
+  }
 </style>
