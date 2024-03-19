@@ -76,6 +76,19 @@ import { Image } from "astro:assets";
   </div>
 </section>
 
+<style is:inline>
+  #perf-2::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    width: 100%;
+    height: 5%;
+    background: url("/bg-1.svg");
+    z-index: -1;
+  }
+</style>
+
 <style>
   h3 {
     margin: 1.5rem 0;
@@ -96,16 +109,16 @@ import { Image } from "astro:assets";
     margin-top: 5rem;
   }
 
-  #perf-2::before {
+  /* #perf-2::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 15%;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: url("/performance_6.jpg");
-    z-index: 3;
-  }
+    height: 12%;
+    background-image: url("/performance_6.jpg");
+    z-index: -1;
+  } */
 
   #perf-2 {
     display: flex;
