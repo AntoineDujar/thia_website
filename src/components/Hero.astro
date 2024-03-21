@@ -45,6 +45,7 @@ import Mic from "@components/Mic.astro";
     background-color: #000000;
     display: flex;
     position: relative;
+    align-content: center;
   }
 
   .image-wrapper {
@@ -131,13 +132,22 @@ import Mic from "@components/Mic.astro";
     }
 
     .hero-wrapper {
-      margin: 0;
-      min-height: unset;
+      min-height: 0rem;
+      justify-content: center;
+      align-items: center;
     }
 
     .text-wrapper {
-      position: relative;
-      margin: 60% auto 20% auto;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      top: auto;
+      right: auto;
+      left: auto;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      height: auto;
     }
 
     .nested {
@@ -154,15 +164,6 @@ import Mic from "@components/Mic.astro";
     h2 {
       font-size: 3.25rem;
       text-align: center;
-    }
-
-    .hero-wrapper {
-      max-height: 500px;
-    }
-    .image-wrapper {
-      position: absolute;
-      max-width: 100%;
-      height: auto;
     }
     .mic,
     .wire {
