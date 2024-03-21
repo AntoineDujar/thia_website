@@ -1,7 +1,61 @@
 ---
 import Header from "./Header.astro";
+import { Image } from "astro:assets";
 ---
 
 <section id="contact">
   <Header title="CONTACT ME" />
+  <div id="iconParent">
+    <img
+      src="/assets/icons/instagram.png"
+      alt="instagram icon"
+      width="50"
+      height="50"
+    />
+    <img
+      src="/assets/icons/youtube.png"
+      alt="instagram icon"
+      width="50"
+      height="50"
+    />
+    <img
+      src="/assets/icons/tik-tok.png"
+      alt="instagram icon"
+      width="50"
+      height="50"
+    />
+  </div>
+  <p>Email: <a href="mailto:business@email.com">business@email.com</a></p>
+  <p>Phone: <a href="tel:+11234567890">+1 123 456 7890</a></p>
+  <p id="backToTop"><a href="#">back to the top ↑</a></p>
 </section>
+
+<style>
+  section {
+    padding-bottom: 5rem;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif, system-ui;
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 0.6rem;
+  }
+
+  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+
+  #iconParent {
+    min-width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  #backToTop {
+    margin-top: 1.5rem;
+  }
+</style>
