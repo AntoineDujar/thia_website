@@ -146,20 +146,6 @@ import about3 from "@images/about-3.jpg";
     top: -50px;
   }
 
-  .container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-  }
-  .slide-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-  }
-
   .controls {
     display: none;
     justify-content: center;
@@ -176,14 +162,30 @@ import about3 from "@images/about-3.jpg";
     .wire2 {
       display: none;
     }
+
     .blaze-slider2 {
       display: block;
-      max-width: 584px;
-      min-width: 400px;
+      background-color: aqua;
+      max-width: 50rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
+    .blaze-container {
+      background-color: red;
+    }
+
+    .blaze-track-container {
+      background-color: green;
     }
 
     .blaze-track {
-      height: 584px;
+      background-color: blanchedalmond;
+    }
+
+    .slide-image {
+      height: auto;
+      width: 100%;
     }
   }
 </style>

@@ -30,16 +30,16 @@ import { Image } from "astro:assets";
       <span class="image-resizer">
         <Image
           src={performance_1}
-          width="200"
+          width="800"
           id="perf-1"
           alt="Image of aspiring vocalist Thia Lanuza"
         />
       </span>
-      <span id="perf-2" class="image-resizer">
+      <span class="image-resizer">
         <Image
-          style="margin:auto auto"
           src={performance_2}
-          width="200"
+          id="perf-2"
+          width="800"
           alt="Image of aspiring vocalist Thia Lanuza"
         />
       </span>
@@ -47,7 +47,7 @@ import { Image } from "astro:assets";
         <Image
           src={performance_3}
           id="perf-3"
-          width="500"
+          width="800"
           alt="Image of aspiring vocalist Thia Lanuza"
         />
       </span>
@@ -55,7 +55,7 @@ import { Image } from "astro:assets";
         <Image
           src={performance_4}
           id="perf-4"
-          width="500"
+          width="800"
           alt="Image of aspiring vocalist Thia Lanuza"
         />
       </span>
@@ -66,7 +66,7 @@ import { Image } from "astro:assets";
         <Image
           src={performance_5}
           id="perf-4"
-          width="500"
+          width="800"
           alt="Image of aspiring vocalist Thia Lanuza"
         />
       </span>
@@ -74,7 +74,7 @@ import { Image } from "astro:assets";
         <Image
           src={performance_6}
           id="perf-4"
-          width="500"
+          width="800"
           alt="Image of aspiring vocalist Thia Lanuza"
         />
       </span>
@@ -108,7 +108,7 @@ import { Image } from "astro:assets";
     z-index: -1;
   }
   @media (max-width: 1250px) {
-    .wrap:: before {
+    .wrap::before {
       display: none;
     }
   }
@@ -123,8 +123,8 @@ import { Image } from "astro:assets";
   }
 
   .image-resizer {
-    background-color: red;
-    min-width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .year-container {
@@ -174,10 +174,12 @@ import { Image } from "astro:assets";
     z-index: -1;
   }
 
+  img {
+    max-width: 35rem;
+    height: auto;
+  }
+
   @media (max-width: 1250px) {
-    .image-wrapper {
-      max-width: 300px;
-    }
 
     .background-wire {
       display: none;
@@ -185,9 +187,9 @@ import { Image } from "astro:assets";
     .background-wire2 {
       display: none;
     }
-    .image-resizer {
-      max-width: 85%;
-      height: auto;
-    }
+
+  img {
+    width: 100%;
+    height: auto;
   }
 </style>
