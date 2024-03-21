@@ -12,12 +12,12 @@ body {
 }
 
 html {
-  background-color: #000000;
+  background-color: #19001f;
 }
 
 @font-face {
-  font-family: 'Magtis';
-  src: url('/fonts/Magtis-ExtraBold-free.otf');
+  font-family: "Magtis";
+  src: url("/fonts/Magtis-ExtraBold-free.otf");
   font-display: swap;
 }
 
