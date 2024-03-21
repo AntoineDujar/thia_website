@@ -5,9 +5,11 @@ import Mic from "@components/Mic.astro";
 ---
 
 <div class="hero-wrapper">
-  <div class="image-wrapper">
-    <Image src={HeroImage} alt="Image of aspiring vocalist Thia Lanuza" />
-  </div>
+  <Image
+    src={HeroImage}
+    class="image-wrapper"
+    alt="Image of aspiring vocalist Thia Lanuza"
+  />
   <div class="text-wrapper">
     <h1>Thia Lanuza</h1>
     <div class="nested">
@@ -91,7 +93,8 @@ import Mic from "@components/Mic.astro";
 
   h1,
   h2 {
-    font-family: "DM Serif Display", serif;
+    /* font-family: "Magtic", "DM Serif Display", serif; */
+    font-family: "Magtis", serif;
     color: white;
   }
 
@@ -118,5 +121,53 @@ import Mic from "@components/Mic.astro";
 
   a:visited {
     color: white;
+  }
+
+  @media (max-width: 1250px) {
+    h1 {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 5rem;
+    }
+
+    .hero-wrapper {
+      background-color: cyan;
+      margin: 0;
+      min-height: unset;
+    }
+
+    .text-wrapper {
+      position: relative;
+      margin: 60% auto 20% auto;
+    }
+
+    .nested {
+      margin: 0 auto;
+    }
+    .vocalist {
+      margin: 0 auto;
+    }
+
+    a {
+      align-self: center;
+    }
+
+    h2 {
+      font-size: 3.25rem;
+      text-align: center;
+    }
+
+    .hero-wrapper {
+      max-height: 500px;
+    }
+    .image-wrapper {
+      position: absolute;
+      max-width: 100%;
+      height: auto;
+    }
+    .mic,
+    .wire {
+      display: none;
+    }
   }
 </style>

@@ -15,6 +15,12 @@ html {
   background-color: #19001F;
 }
 
+@font-face {
+  font-family: 'Magtis';
+  src: url('/fonts/Magtis-ExtraBold-free.otf');
+  font-display: swap;
+}
+
 @media (max-width: 1330px) {
   body {
     max-width: 100%;

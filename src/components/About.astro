@@ -1,4 +1,5 @@
 ---
+import "blaze-slider/dist/blaze.css";
 import Header from "./Header.astro";
 import { Image } from "astro:assets";
 import about1 from "@images/about-1.jpg";
@@ -53,7 +54,53 @@ import about3 from "@images/about-3.jpg";
       <Image src={about3} alt="image 3 singing" height={584} width={380} />
     </div>
   </div>
+  <div class="blaze-slider2">
+    <div class="blaze-container">
+      <div class="blaze-track-container">
+        <div class="blaze-track">
+          <div class="container">
+            <Image
+              src={about2}
+              class="slide-image"
+              alt="image 2 singing"
+              height={584}
+              width={380}
+            />
+          </div>
+          <div class="container">
+            <Image
+              src={about1}
+              class="slide-image"
+              alt="image 1 singing"
+              height={584}
+              width={380}
+            />
+          </div>
+          <div class="container">
+            <Image
+              src={about3}
+              class="slide-image"
+              alt="image 3 singing"
+              height={584}
+              width={380}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script>
+  import BlazeSlider from "blaze-slider";
+  const el2 = document.querySelector(".blaze-slider2") as HTMLElement;
+  new BlazeSlider(el2, {
+    all: {
+      enableAutoplay: true,
+      autoplayInterval: 3000,
+    },
+  });
+</script>
 
 <style>
   p {
@@ -71,12 +118,17 @@ import about3 from "@images/about-3.jpg";
     gap: 3.5rem;
   }
 
+  .blaze-slider2 {
+    display: none;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     margin-top: 4rem;
+    max-width: 95%;
   }
 
   .header-wrapper {
@@ -92,5 +144,46 @@ import about3 from "@images/about-3.jpg";
     position: absolute;
     right: 320px;
     top: -50px;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+  .slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .controls {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+  }
+  @media (max-width: 1250px) {
+    .images {
+      display: none;
+    }
+
+    .wire,
+    .wire2 {
+      display: none;
+    }
+    .blaze-slider2 {
+      display: block;
+      max-width: 584px;
+      min-width: 400px;
+    }
+
+    .blaze-track {
+      height: 584px;
+    }
   }
 </style>

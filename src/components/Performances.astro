@@ -9,11 +9,12 @@ import performance_6 from "@images/performance_6.jpg";
 import { Image } from "astro:assets";
 ---
 
-<section>
+<section class="wrap">
   <Header title="PERFORMANCES" />
   <svg
     width="26"
     height="57"
+    class="background-wire2"
     viewBox="0 0 26 57"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -26,39 +27,57 @@ import { Image } from "astro:assets";
   <h3>2016</h3>
   <div class="all-posters">
     <div class="image-wrapper">
-      <Image
-        src={performance_1}
-        class="perf-image"
-        id="perf-1"
-        alt="Image of aspiring vocalist Thia Lanuza"
-      />
-      <span id="perf-2">
+      <span class="image-resizer">
         <Image
-          style="margin:auto auto"
-          src={performance_2}
+          src={performance_1}
+          width="200"
+          id="perf-1"
           alt="Image of aspiring vocalist Thia Lanuza"
         />
       </span>
-      <Image
-        src={performance_3}
-        id="perf-3"
-        alt="Image of aspiring vocalist Thia Lanuza"
-      />
-      <Image
-        src={performance_4}
-        id="perf-4"
-        alt="Image of aspiring vocalist Thia Lanuza"
-      />
-      <Image
-        src={performance_5}
-        id="perf-4"
-        alt="Image of aspiring vocalist Thia Lanuza"
-      />
-      <Image
-        src={performance_6}
-        id="perf-4"
-        alt="Image of aspiring vocalist Thia Lanuza"
-      />
+      <span id="perf-2" class="image-resizer">
+        <Image
+          style="margin:auto auto"
+          src={performance_2}
+          width="200"
+          alt="Image of aspiring vocalist Thia Lanuza"
+        />
+      </span>
+      <span class="image-resizer">
+        <Image
+          src={performance_3}
+          id="perf-3"
+          width="500"
+          alt="Image of aspiring vocalist Thia Lanuza"
+        />
+      </span>
+      <span class="image-resizer">
+        <Image
+          src={performance_4}
+          id="perf-4"
+          width="500"
+          alt="Image of aspiring vocalist Thia Lanuza"
+        />
+      </span>
+      <div class="year-container">
+        <h3 class="year">2024</h3>
+      </div>
+      <span class="image-resizer">
+        <Image
+          src={performance_5}
+          id="perf-4"
+          width="500"
+          alt="Image of aspiring vocalist Thia Lanuza"
+        />
+      </span>
+      <span class="image-resizer">
+        <Image
+          src={performance_6}
+          id="perf-4"
+          width="500"
+          alt="Image of aspiring vocalist Thia Lanuza"
+        />
+      </span>
     </div>
     <svg
       width="196"
@@ -77,15 +96,21 @@ import { Image } from "astro:assets";
 </section>
 
 <style is:inline>
-  #perf-2::before {
+  .wrap::before {
     content: "";
     position: absolute;
-    top: 15%;
-    left: 6%;
+    top: 55%;
+    left: 7%;
     width: 100%;
-    height: 5%;
-    background: url("/bg-1.svg");
+    height: 100%;
+    background: url("/bg-1.svg") no-repeat;
+    background-size: contain;
     z-index: -1;
+  }
+  @media (max-width: 1250px) {
+    .wrap:: before {
+      display: none;
+    }
   }
 </style>
 
@@ -97,28 +122,36 @@ import { Image } from "astro:assets";
     font-family: "Roboto", system-ui, sans-serif;
   }
 
-  .all-posters {
+  .image-resizer {
+    background-color: red;
+    min-width: 100%;
+  }
+
+  .year-container {
+    position: relative;
+    min-width: 100%;
+    min-height: 4rem;
+  }
+
+  .year {
+    position: absolute;
+    left: 38%;
+    top: -20px;
+    background-color: #19031f;
+    padding: 1rem 0;
+  }
+
+  .wrapper {
     position: relative;
   }
 
-  .perf-image {
-    margin: 0 auto;
+  .all-posters {
+    position: relative;
   }
 
   #perf-1 {
     margin-top: 5rem;
   }
-
-  /* #perf-2::before {
-    content: "";
-    position: absolute;
-    top: 15%;
-    left: 0;
-    width: 100%;
-    height: 12%;
-    background-image: url("/performance_6.jpg");
-    z-index: -1;
-  } */
 
   #perf-2 {
     display: flex;
@@ -129,15 +162,32 @@ import { Image } from "astro:assets";
   .image-wrapper {
     /* background-color: gray; */
     display: flex;
-    gap: 3rem;
+    gap: 5rem;
     flex-direction: column;
     align-items: center;
   }
 
   .background-wire {
     position: absolute;
-    right: 43%;
+    right: 37%;
     top: 15px;
     z-index: -1;
+  }
+
+  @media (max-width: 1250px) {
+    .image-wrapper {
+      max-width: 300px;
+    }
+
+    .background-wire {
+      display: none;
+    }
+    .background-wire2 {
+      display: none;
+    }
+    .image-resizer {
+      max-width: 85%;
+      height: auto;
+    }
   }
 </style>
