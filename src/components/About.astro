@@ -13,8 +13,8 @@ import about3 from "@images/about-3.jpg";
       <Header title="ABOUT ME" />
     </div>
     <svg
-      width="92"
-      height="227"
+      width="77"
+      height="190"
       class="wire"
       viewBox="0 0 92 227"
       fill="none"
@@ -36,8 +36,8 @@ import about3 from "@images/about-3.jpg";
     </p>
     <div class="images">
       <svg
-        width="173"
-        height="690"
+        width="150"
+        height="600"
         viewBox="0 0 173 690"
         fill="none"
         class="wire2"
@@ -103,19 +103,28 @@ import about3 from "@images/about-3.jpg";
 </script>
 
 <style>
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+
   p {
     color: white;
     max-width: 110ch;
     font-family: "Roboto", sans-serif, system-ui;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 1rem;
   }
 
   .images {
-    margin: 4rem 0;
     max-width: 1200px;
     position: relative;
     display: flex;
     gap: 3.5rem;
+    margin-top: 5rem;
   }
 
   .blaze-slider2 {
@@ -127,7 +136,6 @@ import about3 from "@images/about-3.jpg";
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-top: 4rem;
     max-width: 95%;
   }
 
@@ -138,12 +146,12 @@ import about3 from "@images/about-3.jpg";
   .wire {
     position: absolute;
     right: 200px;
-    top: -65px;
+    top: -25px;
   }
   .wire2 {
     position: absolute;
     right: 320px;
-    top: -50px;
+    top: -80px;
   }
 
   .controls {
@@ -153,13 +161,19 @@ import about3 from "@images/about-3.jpg";
     margin-top: 50px;
     gap: 20px;
   }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
   @media (max-width: 1250px) {
     .images {
       display: none;
     }
 
     p {
-      margin-top: 0;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
 
     .header-wrapper {

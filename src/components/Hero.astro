@@ -19,8 +19,8 @@ import Mic from "@components/Mic.astro";
           <Mic />
         </div>
         <svg
-          width="60"
-          height="493"
+          width="51"
+          height="419"
           class="wire"
           viewBox="0 0 60 493"
           fill="none"
@@ -29,7 +29,7 @@ import Mic from "@components/Mic.astro";
           <path
             d="M2 2C28.305 26.814 74.7217 98.5488 49.9484 186.977C18.9817 297.512 10.9903 292.248 38.9602 420.829C61.3361 523.695 40.2921 572.47 26.9731 584"
             stroke="white"
-            stroke-width="5"></path>
+            stroke-width="4"></path>
         </svg>
       </div>
       <a href="#contact">
@@ -55,7 +55,8 @@ import Mic from "@components/Mic.astro";
   .wire {
     position: absolute;
     top: 200px;
-    right: -50px;
+    right: -42px;
+    z-index: 1;
   }
 
   .vocalist {
@@ -114,6 +115,7 @@ import Mic from "@components/Mic.astro";
     border-radius: 0px;
     font-size: 2rem;
     text-decoration: none;
+    margin-top: 1rem;
     padding: 1rem 1.5rem;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
