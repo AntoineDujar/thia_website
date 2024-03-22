@@ -6,24 +6,33 @@ import { Image } from "astro:assets";
 <section id="contact">
   <Header title="CONTACT ME" />
   <div id="iconParent">
-    <img
-      src="/assets/icons/instagram.png"
-      alt="instagram icon"
-      width="50"
-      height="50"
-    />
-    <img
-      src="/assets/icons/youtube.png"
-      alt="instagram icon"
-      width="50"
-      height="50"
-    />
-    <img
-      src="/assets/icons/tik-tok.png"
-      alt="instagram icon"
-      width="50"
-      height="50"
-    />
+    <a href="https://www.instagram.com/lanuthai/" target="_blank">
+      <img
+        src="/assets/icons/instagram.png"
+        alt="instagram icon"
+        width="65"
+        height="65"
+      />
+    </a>
+    <a
+      href="https://www.youtube.com/channel/UCGHJEyXb7Wbz9JSh9jVc_dQ"
+      target="_blank"
+    >
+      <img
+        src="/assets/icons/youtube.png"
+        alt="instagram icon"
+        width="65"
+        height="65"
+      />
+    </a>
+    <a href="https://www.tiktok.com/@ina_thia" target="_blank">
+      <img
+        src="/assets/icons/tik-tok.png"
+        alt="instagram icon"
+        width="65"
+        height="65"
+      />
+    </a>
   </div>
   <p>Email: <a href="mailto:business@email.com">business@email.com</a></p>
   <p>Phone: <a href="tel:+11234567890">+1 123 456 7890</a></p>
@@ -48,11 +57,11 @@ import { Image } from "astro:assets";
   }
 
   #iconParent {
-    min-width: 20rem;
+    min-width: 25rem;
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   #backToTop {

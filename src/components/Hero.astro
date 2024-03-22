@@ -19,8 +19,8 @@ import Mic from "@components/Mic.astro";
           <Mic />
         </div>
         <svg
-          width="60"
-          height="493"
+          width="51"
+          height="419"
           class="wire"
           viewBox="0 0 60 493"
           fill="none"
@@ -29,7 +29,7 @@ import Mic from "@components/Mic.astro";
           <path
             d="M2 2C28.305 26.814 74.7217 98.5488 49.9484 186.977C18.9817 297.512 10.9903 292.248 38.9602 420.829C61.3361 523.695 40.2921 572.47 26.9731 584"
             stroke="white"
-            stroke-width="5"></path>
+            stroke-width="4"></path>
         </svg>
       </div>
       <a href="#contact">
@@ -45,6 +45,7 @@ import Mic from "@components/Mic.astro";
     background-color: #000000;
     display: flex;
     position: relative;
+    align-content: center;
   }
 
   .image-wrapper {
@@ -54,7 +55,8 @@ import Mic from "@components/Mic.astro";
   .wire {
     position: absolute;
     top: 200px;
-    right: -50px;
+    right: -42px;
+    z-index: 1;
   }
 
   .vocalist {
@@ -113,6 +115,7 @@ import Mic from "@components/Mic.astro";
     border-radius: 0px;
     font-size: 2rem;
     text-decoration: none;
+    margin-top: 1rem;
     padding: 1rem 1.5rem;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -127,17 +130,31 @@ import Mic from "@components/Mic.astro";
     h1 {
       margin-top: 2rem;
       text-align: center;
-      font-size: 5rem;
+      font-size: 7rem;
+    }
+
+    h2 {
+      font-size: 5.25rem;
+      text-align: center;
     }
 
     .hero-wrapper {
-      margin: 0;
-      min-height: unset;
+      min-height: 0rem;
+      justify-content: center;
+      align-items: center;
     }
 
     .text-wrapper {
-      position: relative;
-      margin: 60% auto 20% auto;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      top: auto;
+      right: auto;
+      left: auto;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      height: auto;
     }
 
     .nested {
@@ -151,22 +168,33 @@ import Mic from "@components/Mic.astro";
       align-self: center;
     }
 
-    h2 {
-      font-size: 3.25rem;
-      text-align: center;
-    }
-
-    .hero-wrapper {
-      max-height: 500px;
-    }
-    .image-wrapper {
-      position: absolute;
-      max-width: 100%;
-      height: auto;
-    }
     .mic,
     .wire {
       display: none;
+    }
+  }
+
+  @media (max-width: 650px) {
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 3.25rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1.5rem;
     }
   }
 </style>
