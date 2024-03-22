@@ -12,6 +12,7 @@ import Mic from "@components/Mic.astro";
   />
   <div class="text-wrapper">
     <h1>Thia Lanuza</h1>
+    <img id="star" src="star.svg" alt="decorative star" />
     <div class="nested">
       <div class="vocalist">
         <h2>Aspiring Vocalist</h2>
@@ -46,6 +47,13 @@ import Mic from "@components/Mic.astro";
     display: flex;
     position: relative;
     align-content: center;
+  }
+
+  #star {
+    position: absolute;
+    height: 30px;
+    top: 30px;
+    width: 30px;
   }
 
   .image-wrapper {
@@ -128,6 +136,11 @@ import Mic from "@components/Mic.astro";
   }
 
   @media (max-width: 1250px) {
+    #star {
+      height: 20px;
+      width: 20px;
+    }
+
     h1 {
       margin-top: 2rem;
       text-align: center;
