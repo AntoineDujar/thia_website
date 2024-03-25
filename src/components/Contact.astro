@@ -1,14 +1,18 @@
 ---
 import Header from "./Header.astro";
 import { Image } from "astro:assets";
+import instagram from "@assets/icons/instagram.png";
+import youtube from "@assets/icons/youtube.png";
+import tiktok from "@assets/icons/tik-tok.png";
 ---
 
 <section id="contact">
   <Header title="CONTACT ME" />
   <div id="iconParent">
     <a href="https://www.instagram.com/lanuthai/" target="_blank">
-      <img
-        src="/assets/icons/instagram.png"
+      <Image
+        class="image"
+        src={instagram}
         alt="instagram icon"
         width="65"
         height="65"
@@ -18,17 +22,19 @@ import { Image } from "astro:assets";
       href="https://www.youtube.com/channel/UCGHJEyXb7Wbz9JSh9jVc_dQ"
       target="_blank"
     >
-      <img
-        src="/assets/icons/youtube.png"
-        alt="instagram icon"
+      <Image
+        class="image"
+        src={youtube}
+        alt="youtube icon"
         width="65"
         height="65"
       />
     </a>
     <a href="https://www.tiktok.com/@ina_thia" target="_blank">
-      <img
-        src="/assets/icons/tik-tok.png"
-        alt="instagram icon"
+      <Image
+        class="image"
+        src={tiktok}
+        alt="tik tok icon"
         width="65"
         height="65"
       />
@@ -74,7 +80,7 @@ import { Image } from "astro:assets";
       margin-top: 0.5rem;
       min-width: 10rem;
     }
-    img {
+    .image {
       height: 30px;
       width: 30px;
     }
