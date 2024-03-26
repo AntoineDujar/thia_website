@@ -6,6 +6,7 @@ import performance_3 from "@images/performance_3.jpg";
 import performance_4 from "@images/performance_4.jpg";
 import performance_5 from "@images/performance_5.webp";
 import performance_6 from "@images/performance_6.jpg";
+import performance_7 from "@images/performance_7.jpg";
 import { Image } from "astro:assets";
 ---
 
@@ -78,6 +79,14 @@ import { Image } from "astro:assets";
           alt="Image of aspiring vocalist Thia Lanuza"
         />
       </span>
+      <span class="image-resizer">
+        <Image
+          src={performance_7}
+          id="perf-7"
+          width="800"
+          alt="Image of aspiring vocalist Thia Lanuza"
+        />
+      </span>
     </div>
     <svg
       width="166.6"
@@ -111,7 +120,7 @@ import { Image } from "astro:assets";
   .wrap {
     display: block;
     width: 100%;
-    height: 4500px;
+    height: 5400px;
     background: url("/bg-1.svg") no-repeat;
     background-size: contain;
     z-index: 3;
