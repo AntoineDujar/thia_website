@@ -2,7 +2,7 @@
 import Header from "./Header.astro";
 ---
 
-<section>
+<section id="booking">
   <Header title="BOOKING INQUIRY" />
   <form name="booking" method="POST" data-netlify="true" class="inquiry_form">
     <div class="form_input_fields">
@@ -20,15 +20,36 @@ import Header from "./Header.astro";
     </div>
     <button type="submit">BOOK NOW</button>
   </form>
+  <svg
+    width="256.7"
+    height="278"
+    viewBox="0 0 302 327"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M249.692 203L298.692 215V265" stroke="white" stroke-width="5"
+    ></path>
+    <path
+      d="M86.6921 3C50.0255 20.6667 -16.9079 66.8 8.69214 110C40.6921 164 211.364 276.712 206.192 315.5C204.192 330.5 170.025 326.333 168.692 301C168.025 282.667 193.092 240.2 298.692 217"
+      stroke="white"
+      stroke-width="5"></path>
+  </svg>
 </section>
 
 <style>
   input {
-    padding: 0.4rem 1rem;
+    padding: 0.7rem 1rem;
+  }
+
+  svg {
+    position: relative;
+    bottom: 80px;
+    right: 320px;
   }
 
   button {
-    margin-top: 1rem;
+    margin-top: 3rem;
+    color: rgb(0, 0, 0);
     width: 19.2rem;
     height: 3rem;
     padding: 0px;
@@ -37,16 +58,35 @@ import Header from "./Header.astro";
     font-family: "Koulen", serif;
     font-size: 1.5rem;
     border: none;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+  }
+
+  button:hover {
+    background-color: purple;
+    color: white;
   }
 
   .spacer {
     margin-left: 1rem;
   }
 
+  @media (max-width: 1100px) {
+    svg {
+      display: none;
+    }
+  }
+
   @media (max-width: 768px) {
+    svg {
+      display: none;
+    }
     .spacer {
       margin-left: 0rem;
       margin-top: 0.35rem;
+    }
+    button {
+      width: 10.2rem;
     }
   }
 
@@ -55,6 +95,8 @@ import Header from "./Header.astro";
     flex-direction: column;
     align-items: center;
     width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 
   .form_input_fields {
@@ -85,7 +127,7 @@ import Header from "./Header.astro";
 
   .first_input_column input {
     height: 1.5rem;
-    margin-bottom: 0.35rem;
+    margin-bottom: 1.5rem;
     color: rgb(0, 0, 0);
     font-family: "Roboto", sans-serif, system-ui;
     font-size: 1.15rem;
@@ -114,7 +156,8 @@ import Header from "./Header.astro";
 
   @media (max-width: 768px) {
     .inputbox {
-      height: 5rem;
+      height: 9rem;
+      margin-top: 1.3rem;
     }
   }
 

@@ -1,4 +1,5 @@
 ---
+import "blaze-slider/dist/blaze.css";
 import Header from "./Header.astro";
 import { Image } from "astro:assets";
 import about1 from "@images/about-1.jpg";
@@ -12,8 +13,8 @@ import about3 from "@images/about-3.jpg";
       <Header title="ABOUT ME" />
     </div>
     <svg
-      width="92"
-      height="227"
+      width="77"
+      height="190"
       class="wire"
       viewBox="0 0 92 227"
       fill="none"
@@ -25,18 +26,17 @@ import about3 from "@images/about-3.jpg";
         stroke-width="5"></path>
     </svg>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      Thia Lanuza is an award-winning Filipino-Canadian vocal performer based in
+      Greater Victoria/Vancouver, specializing in Pop Ballads, Jazz, RnB, and
+      Musical Theatre. She has a long history of singing various genres in
+      different settings and continuously delivers professionalism and quality
+      with every performance. Thia sings from her heart and is always aiming to
+      share her love of music by touching the hearts of others.
     </p>
     <div class="images">
       <svg
-        width="173"
-        height="690"
+        width="150"
+        height="600"
         viewBox="0 0 173 690"
         fill="none"
         class="wire2"
@@ -53,22 +53,81 @@ import about3 from "@images/about-3.jpg";
       <Image src={about3} alt="image 3 singing" height={584} width={380} />
     </div>
   </div>
+  <div class="blaze-slider2">
+    <div class="blaze-container">
+      <div class="blaze-track-container">
+        <div class="blaze-track">
+          <div class="container">
+            <Image
+              src={about2}
+              class="slide-image"
+              alt="image 2 singing"
+              height={584}
+              width={380}
+            />
+          </div>
+          <div class="container">
+            <Image
+              src={about1}
+              class="slide-image"
+              alt="image 1 singing"
+              height={584}
+              width={380}
+            />
+          </div>
+          <div class="container">
+            <Image
+              src={about3}
+              class="slide-image"
+              alt="image 3 singing"
+              height={584}
+              width={380}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<script>
+  import BlazeSlider from "blaze-slider";
+  const el2 = document.querySelector(".blaze-slider2") as HTMLElement;
+  new BlazeSlider(el2, {
+    all: {
+      enableAutoplay: true,
+      autoplayInterval: 3000,
+    },
+  });
+</script>
+
 <style>
+  img {
+    max-width: 300px;
+    height: auto;
+  }
+
   p {
     color: white;
     max-width: 110ch;
     font-family: "Roboto", sans-serif, system-ui;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 1rem;
   }
 
   .images {
-    margin: 4rem 0;
     max-width: 1200px;
     position: relative;
     display: flex;
     gap: 3.5rem;
+    margin-top: 5rem;
+  }
+
+  .blaze-slider2 {
+    display: none;
   }
 
   .wrapper {
@@ -76,7 +135,7 @@ import about3 from "@images/about-3.jpg";
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-top: 4rem;
+    max-width: 95%;
   }
 
   .header-wrapper {
@@ -86,11 +145,54 @@ import about3 from "@images/about-3.jpg";
   .wire {
     position: absolute;
     right: 200px;
-    top: -65px;
+    top: -25px;
   }
   .wire2 {
     position: absolute;
     right: 320px;
-    top: -50px;
+    top: -80px;
+  }
+
+  .controls {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 1250px) {
+    .images {
+      display: none;
+    }
+
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .header-wrapper {
+      margin-bottom: 0;
+    }
+
+    .wire,
+    .wire2 {
+      display: none;
+    }
+
+    .blaze-slider2 {
+      display: block;
+      max-width: 550px;
+      margin: 1rem 3rem;
+    }
+
+    .slide-image {
+      height: auto;
+      width: 100%;
+    }
   }
 </style>

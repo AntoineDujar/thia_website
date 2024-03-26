@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@astro-community/astro-embed-youtube':
+    specifier: ^0.4.4
+    version: 0.4.4(astro@4.4.6)
   '@astrojs/svelte':
     specifier: ^5.2.0
     version: 5.2.0(astro@4.4.6)(svelte@4.2.12)(typescript@5.3.3)(vite@5.1.4)
@@ -47,6 +50,15 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.4
       '@jridgewell/trace-mapping': 0.3.23
+    dev: false
+
+  /@astro-community/astro-embed-youtube@0.4.4(astro@4.4.6):
+    resolution: {integrity: sha512-fYlycLrJFNnibZ9VHPSJO766kO2IgqYQU4mBd4iaDMaicL0gGX9cVZ80QdnpzGrI6w0XOJOY7prx86eWEVBy8w==}
+    peerDependencies:
+      astro: ^2.0.0 || ^3.0.0-beta || ^4.0.0-beta
+    dependencies:
+      astro: 4.4.6(lightningcss@1.24.0)(typescript@5.3.3)
+      lite-youtube-embed: 0.2.0
     dev: false
 
   /@astrojs/compiler@2.6.0:
@@ -2278,6 +2290,10 @@ packages:
       lightningcss-linux-x64-gnu: 1.24.0
       lightningcss-linux-x64-musl: 1.24.0
       lightningcss-win32-x64-msvc: 1.24.0
+    dev: false
+
+  /lite-youtube-embed@0.2.0:
+    resolution: {integrity: sha512-XXXAk5sbvtjjwbie3XG+6HppgTm1HTGL/Uk9z9NkJH53o7puZLur434heHzAjkS60hZB3vT4ls25zl5rMiX4EA==}
     dev: false
 
   /load-yaml-file@0.2.0:

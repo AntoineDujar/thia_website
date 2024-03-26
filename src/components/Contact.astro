@@ -1,38 +1,59 @@
 ---
 import Header from "./Header.astro";
 import { Image } from "astro:assets";
+import instagram from "@assets/icons/instagram.png";
+import youtube from "@assets/icons/youtube.png";
+import tiktok from "@assets/icons/tik-tok.png";
 ---
 
-<section>
+<section id="contact">
   <Header title="CONTACT ME" />
   <div id="iconParent">
-    <img
-      src="/assets/icons/instagram.png"
-      alt="instagram icon"
-      width="50"
-      height="50"
-    />
-    <img
-      src="/assets/icons/youtube.png"
-      alt="instagram icon"
-      width="50"
-      height="50"
-    />
-    <img
-      src="/assets/icons/tik-tok.png"
-      alt="instagram icon"
-      width="50"
-      height="50"
-    />
+    <a href="https://www.instagram.com/lanuthai/" target="_blank">
+      <Image
+        class="image"
+        src={instagram}
+        alt="instagram icon"
+        width="65"
+        height="65"
+      />
+    </a>
+    <a
+      href="https://www.youtube.com/channel/UCGHJEyXb7Wbz9JSh9jVc_dQ"
+      target="_blank"
+    >
+      <Image
+        class="image"
+        src={youtube}
+        alt="youtube icon"
+        width="65"
+        height="65"
+      />
+    </a>
+    <a href="https://www.tiktok.com/@ina_thia" target="_blank">
+      <Image
+        class="image"
+        src={tiktok}
+        alt="tik tok icon"
+        width="65"
+        height="65"
+      />
+    </a>
   </div>
-  <p>Email: <a href="mailto:business@email.com">business@email.com</a></p>
-  <p>Phone: <a href="tel:+11234567890">+1 123 456 7890</a></p>
+  <p>Email: <a href="mailto:tlanuza3@gmail.com">tlanuza3@gmail.com</a></p>
+  <p>Phone: <a href="tel:+12505087296">+1 250 508 7296</a></p>
   <p id="backToTop"><a href="#">back to the top ↑</a></p>
 </section>
 
 <style>
   section {
     padding-bottom: 5rem;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .header {
+    margin-top: 0;
   }
 
   p {
@@ -44,15 +65,25 @@ import { Image } from "astro:assets";
 
   a {
     color: rgb(255, 255, 255);
-    text-decoration: none;
   }
 
   #iconParent {
-    min-width: 20rem;
+    min-width: 25rem;
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    #iconParent {
+      margin-top: 0.5rem;
+      min-width: 10rem;
+    }
+    .image {
+      height: 30px;
+      width: 30px;
+    }
   }
 
   #backToTop {

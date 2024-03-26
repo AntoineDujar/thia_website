@@ -5,11 +5,14 @@ import Mic from "@components/Mic.astro";
 ---
 
 <div class="hero-wrapper">
-  <div class="image-wrapper">
-    <Image src={HeroImage} alt="Image of aspiring vocalist Thia Lanuza" />
-  </div>
+  <Image
+    src={HeroImage}
+    class="image-wrapper"
+    alt="Image of aspiring vocalist Thia Lanuza"
+  />
   <div class="text-wrapper">
     <h1>Thia Lanuza</h1>
+    <img id="star" src="star.svg" alt="decorative star" />
     <div class="nested">
       <div class="vocalist">
         <h2>Aspiring Vocalist</h2>
@@ -17,8 +20,8 @@ import Mic from "@components/Mic.astro";
           <Mic />
         </div>
         <svg
-          width="60"
-          height="493"
+          width="51"
+          height="419"
           class="wire"
           viewBox="0 0 60 493"
           fill="none"
@@ -27,10 +30,10 @@ import Mic from "@components/Mic.astro";
           <path
             d="M2 2C28.305 26.814 74.7217 98.5488 49.9484 186.977C18.9817 297.512 10.9903 292.248 38.9602 420.829C61.3361 523.695 40.2921 572.47 26.9731 584"
             stroke="white"
-            stroke-width="5"></path>
+            stroke-width="4"></path>
         </svg>
       </div>
-      <a href="./">
+      <a href="#booking">
         <p>BOOK NOW</p>
       </a>
     </div>
@@ -43,6 +46,14 @@ import Mic from "@components/Mic.astro";
     background-color: #000000;
     display: flex;
     position: relative;
+    align-content: center;
+  }
+
+  #star {
+    position: absolute;
+    height: 30px;
+    top: 30px;
+    width: 30px;
   }
 
   .image-wrapper {
@@ -51,8 +62,9 @@ import Mic from "@components/Mic.astro";
 
   .wire {
     position: absolute;
-    top: 214px;
-    right: -50px;
+    top: 200px;
+    right: -42px;
+    z-index: -1000;
   }
 
   .vocalist {
@@ -64,8 +76,9 @@ import Mic from "@components/Mic.astro";
 
   .mic {
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     right: 0;
+    z-index: -1000;
   }
 
   .text-wrapper {
@@ -91,7 +104,8 @@ import Mic from "@components/Mic.astro";
 
   h1,
   h2 {
-    font-family: "DM Serif Display", serif;
+    /* font-family: "Magtic", "DM Serif Display", serif; */
+    font-family: "Magtis", serif;
     color: white;
   }
 
@@ -110,13 +124,96 @@ import Mic from "@components/Mic.astro";
     border-radius: 0px;
     font-size: 2rem;
     text-decoration: none;
+    margin-top: 1rem;
     padding: 1rem 1.5rem;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     align-self: flex-start;
+    transition: all 0.1s ease-in;
+  }
+
+  a:hover {
+    background-color: purple;
+    color: white;
   }
 
   a:visited {
-    color: rgb(0, 0, 0);
+  }
+
+  @media (max-width: 1250px) {
+    #star {
+      height: 20px;
+      width: 20px;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 7rem;
+    }
+
+    h2 {
+      font-size: 5.25rem;
+      text-align: center;
+    }
+
+    .hero-wrapper {
+      min-height: 0rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-wrapper {
+      margin-right: 1rem;
+      margin-left: 1rem;
+      top: auto;
+      right: auto;
+      left: auto;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      height: auto;
+    }
+
+    .nested {
+      margin: 0 auto;
+    }
+    .vocalist {
+      margin: 0 auto;
+    }
+
+    a {
+      align-self: center;
+    }
+
+    .mic,
+    .wire {
+      display: none;
+    }
+  }
+
+  @media (max-width: 650px) {
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 3.25rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
   }
 </style>
